@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- using Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>PDF Viewer</title>
+</head>
+<body>
+    <!-- this is the bar that renders on top of the PDF and displays information -->
+    <div class="top-bar">
+        <button class="btn" id="prev-page">
+            Previous Page
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+
+        <button class="btn" id="next-page">
+            Next Page
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+
+        <span class="page-info">
+            Page <span id="page-num"></span> of <span id="page-count"></span>
+        </span>
+    </div>
+
+    <!-- this is the canvas on which we'll print the PDF -->
+    <canvas id="pdf-render"></canvas>
+
+    <!-- CDN getting pulled in -->
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <!-- reponds to code written in main.js -->
+    <script src="js/main.js"></script>
+</html>
